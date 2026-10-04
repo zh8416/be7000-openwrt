@@ -542,3 +542,6 @@ CONFIG_PACKAGE_sing-box=m
 CONFIG_PACKAGE_zapret=m
 CONFIG_PACKAGE_zapret2=m
 CONFIG_PACKAGE_zapret-manager-beam=m
+CONFIG_PACKAGE_luci-app-openclash=m
+CONFIG_PACKAGE_luci-app-istore=m
+CONFIG_PACKAGE_luci-app-quickstart=m
