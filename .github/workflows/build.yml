@@ -330,6 +330,8 @@ jobs:
           git clone --branch gh-pages --single-branch \
             "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" pages
           cd pages
+          # 清空 gh-pages 里除 .git 和 . 以外的所有旧文件
+          find . -maxdepth 1 ! -name '.git' ! -name '.' -exec rm -rf {} +
           # feed/$ARCH/ (no base) is the frozen feed of the 1.3.x images
           for d in awg awgproto beamextras base byedpi luci netshift packages zapret zapret2; do
             [ -d "../owrt/bin/packages/$ARCH/$d" ] || continue
