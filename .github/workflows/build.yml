@@ -315,6 +315,17 @@ jobs:
         if: always()
         run: cd owrt && (staging_dir/host/bin/ccache -s 2>/dev/null || ccache -s 2>/dev/null || echo "no ccache binary yet")
 
+      - name: Upload firmware artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: be7000-firmware
+          path: |
+            owrt/bin/targets/qualcommbe/ipq95xx/*.ubi
+            owrt/bin/targets/qualcommbe/ipq95xx/*.bin
+            owrt/bin/targets/qualcommbe/ipq95xx/*.manifest
+            owrt/bin/targets/qualcommbe/ipq95xx/sha256sums
+          if-no-files-found: error
+
       - name: Check the image is clean
         run: |
           cd owrt
