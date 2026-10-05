@@ -138,6 +138,13 @@ jobs:
           openssl ec -in private-key.pem -pubout -out public-key.pem 2>/dev/null
           echo "public key sha256: $(sha256sum public-key.pem | cut -c1-16)"
 
+      - name: Install public key into the image
+        run: |
+          cd owrt
+          mkdir -p files/etc/apk/keys
+          cp public-key.pem files/etc/apk/keys/beam-wrt.pem
+          ls -l files/etc/apk/keys/
+          
       - name: Pin and install feeds
         run: |
           cd owrt
