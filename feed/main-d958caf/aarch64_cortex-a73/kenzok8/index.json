@@ -4,8 +4,12 @@
   "packages": {
     "luci-app-openclash": "0.47.156",
     "luci-app-quickstart": "0.12.10-r1",
+    "luci-app-store": "0.2.1-r1",
     "luci-i18n-quickstart-zh-cn": "26.277.41717~cb60b83",
+    "luci-lib-taskd": "1.0.26",
+    "luci-lib-xterm": "4.18.0",
     "mihomo": "1.19.32-r1",
-    "quickstart": "0.13.0-r1"
+    "quickstart": "0.13.0-r1",
+    "taskd": "1.0.3-r2"
   }
 }
