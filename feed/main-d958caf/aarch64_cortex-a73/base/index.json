@@ -86,7 +86,7 @@
     "losetup": "2.42.2-r1",
     "lsblk": "2.42.2-r1",
     "lua": "5.1.5-r11",
-    "luci-app-be7000-nfc": "26.278.30199~5e97091",
+    "luci-app-be7000-nfc": "26.278.37468~0feb3f6",
     "luci-theme-nimbus": "0.261001.4-r1",
     "mdadm": "4.3-r2",
     "mkf2fs": "1.16.0-r4",
