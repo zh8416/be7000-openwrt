@@ -6,4 +6,4 @@ config bigoverlay 'main'
 	# it over erases them: stock still boots after a rollback, it just comes
 	# up factory fresh. Set this to 0 before the first boot to keep the small
 	# in-slot overlay and leave the stock settings alone.
-	option enabled '1'
+	option enabled '0'
