@@ -510,3 +510,15 @@ CONFIG_PACKAGE_uboot-envtools=m
 CONFIG_PACKAGE_luci-app-diskman=m
 CONFIG_PACKAGE_luci-app-easytier=m
 CONFIG_PACKAGE_luci-app-argon-config=m
+
+2026.10.09-8:34:00-add
+CONFIG_PACKAGE_luci-app-floatip=m
+CONFIG_PACKAGE_luci-app-lucky=m
+CONFIG_PACKAGE_luci-app-mosdns=m
+CONFIG_PACKAGE_luci-app-oaf=m
+CONFIG_PACKAGE_luci-app-openlist=m
+CONFIG_PACKAGE_luci-app-pushbot=m
+CONFIG_PACKAGE_luci-app-systools=m
+CONFIG_PACKAGE_luci-app-vlmcsd=m
+CONFIG_PACKAGE_luci-app-timecontrol=m
+CONFIG_PACKAGE_upx=m
