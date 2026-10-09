@@ -186,17 +186,6 @@ jobs:
           ./scripts/feeds update -i netshift
           ./scripts/feeds install -a
 
-      - name: Fix vlmcsd GNUmakefile
-        run: |
-          cd owrt
-          f=$(find build_dir -path '*vlmcsd*/src/GNUmakefile' | head -1)
-          if [ -n "$f" ]; then
-            sed -i 's|-c \$< -o \$@|-o $@ -c $<|g' "$f"
-            grep -n '\-o \$@ -c \$<' "$f" || echo "sed did not match"
-          else
-            echo "vlmcsd GNUmakefile not found, skipping"
-          fi
-
       - name: Configure
         run: |
           cd owrt
