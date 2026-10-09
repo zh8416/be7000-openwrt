@@ -140,6 +140,7 @@
     "kmod-nls-iso8859-1": "6.18.52-r1",
     "kmod-nls-ucs2-utils": "6.18.52-r1",
     "kmod-nls-utf8": "6.18.52-r1",
+    "kmod-oaf": "6.18.52-r1",
     "kmod-oid-registry": "6.18.52-r1",
     "kmod-ovpn-backports": "6.18.52.7.2.0.2026082800-r1",
     "kmod-pcs-qcom-ipq9574": "6.18.52-r1",
