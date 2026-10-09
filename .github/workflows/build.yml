@@ -124,6 +124,11 @@ jobs:
           # the LuCI theme lives in this repo, not in any feed
           cp -a ../repo/luci-theme-nimbus package/
 
+      - name: Fix vlmcsd GNUmakefile
+        run: |
+          cd owrt
+          sed -i 's|-c \$< -o \$@|-o $@ -c $<|g' feeds/kenzok8/other/lean/vlmcsd/src/GNUmakefile
+
       - name: Signing key
         env:
           APK_SIGNING_KEY: ${{ secrets.APK_SIGNING_KEY }}
