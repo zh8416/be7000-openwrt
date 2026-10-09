@@ -22,7 +22,7 @@ DB_ROM=/rom/lib/apk/db
 WORLD=/etc/apk/world
 WORLD_ROM=/rom/etc/apk/world
 PENDING=/etc/be7000-reinstall
-FEED_HOST=timofey-maykov.github.io/be7000-openwrt
+FEED_HOST=zh8416.github.io/be7000-openwrt
 DNS_BACKUP=/etc/be7000-dhcp.before-reinstall
 
 kernel_of() {
