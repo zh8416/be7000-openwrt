@@ -186,6 +186,11 @@ jobs:
           ./scripts/feeds update -i netshift
           ./scripts/feeds install -a
 
+      - name: Fix vlmcsd GNUmakefile
+        run: |
+          cd owrt
+          sed -i 's|-c \$< -o \$@|-o $@ -c $<|g' feeds/kenzok8/other/lean/vlmcsd/src/GNUmakefile
+
       - name: Configure
         run: |
           cd owrt
