@@ -36,4 +36,4 @@ http://10.20.3.250/packages/aarch64_cortex-a73/netshift/packages.adb
 http://10.20.3.250/packages/aarch64_cortex-a73/zapret/packages.adb
 http://10.20.3.250/packages/aarch64_cortex-a73/zapret2/packages.adb
 http://10.20.3.250/feed/hybrid-failover/aarch64_cortex-a73/packages.adb
-http://10.20.3.250/feed/targets/qualcommbe/ipq95xx/packages/packages.adb
+http://10.20.3.250/targets/qualcommbe/ipq95xx/packages/packages.adb
