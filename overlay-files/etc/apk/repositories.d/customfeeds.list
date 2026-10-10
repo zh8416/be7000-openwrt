@@ -22,18 +22,18 @@ https://zh8416.github.io/be7000-openwrt/feed/hybrid-failover/aarch64_cortex-a73/
 # own target feed is built against a newer kernel and cannot satisfy the
 # dependency, so the modules have to come from here.
 https://zh8416.github.io/be7000-openwrt/feed/targets/qualcommbe/ipq95xx/packages/packages.adb
-
+http://10.20.3.250/targets/qualcommbe/ipq95xx/packages/packages.adb
 #local
-http://10.20.3.250/feed/main-d958caf/aarch64_cortex-a73/base/packages.adb
-http://10.20.3.250/feed/main-d958caf/aarch64_cortex-a73/luci/packages.adb
-http://10.20.3.250/feed/main-d958caf/aarch64_cortex-a73/packages/packages.adb
-http://10.20.3.250/feed/main-d958caf/aarch64_cortex-a73/kenzok8/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/awg/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/awgproto/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/beamextras/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/byedpi/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/netshift/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/zapret/packages.adb
-http://10.20.3.250/feed/aarch64_cortex-a73/zapret2/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/base/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/luci/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/packages/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/kenzok8/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/awg/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/awgproto/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/beamextras/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/byedpi/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/netshift/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/zapret/packages.adb
+http://10.20.3.250/packages/aarch64_cortex-a73/zapret2/packages.adb
 http://10.20.3.250/feed/hybrid-failover/aarch64_cortex-a73/packages.adb
 http://10.20.3.250/feed/targets/qualcommbe/ipq95xx/packages/packages.adb
