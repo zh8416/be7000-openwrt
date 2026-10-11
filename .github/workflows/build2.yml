@@ -1,27 +1,5 @@
 name: Build Mini
 
-# Everything the project ships comes out of this one workflow, so nothing has
-# to be built on a laptop any more:
-#
-#   - on a manual run it builds every package in config2.buildinfo and pushes
-#     the signed feed straight to the gh-pages branch;
-#   - on a v* tag it does the same and also builds the firmware, packs the
-#     archive with the installer and the instruction, and publishes a GitHub
-#     Release with all of it attached.
-#
-# Nothing goes through Actions artifacts: the feed lands in git, the images
-# land in the release, and that is all the storage this uses.
-#
-# Kernel modules are published under a directory named after the kernel's
-# config hash (vermagic). apk refuses a module built for a different hash, and
-# every image bakes its own hash into /etc/apk/repositories.d/customfeeds.list,
-# so an old image keeps finding modules that fit it after the kernel config
-# moves on. The unversioned targets/.../packages directory is the feed of the
-# 1.2.x images and is never touched here.
-#
-# The apk indexes are signed with the same key the images trust, taken from
-# the APK_SIGNING_KEY secret (the private-key.pem of the original tree).
-
 on:
   workflow_dispatch:
     inputs:
@@ -33,14 +11,10 @@ on:
     tags: ["mini-v*", "mini-debug-*"]
 
 env:
-  # Upstream OpenWrt at the commit patches/port/BASE names; the BE7000 port
-  # itself is the series in patches/port/ (a step below checks the two agree).
   OWRT_REPO: https://github.com/openwrt/openwrt.git
   OWRT_COMMIT: d958caff0c9ffa215dceb0718caad7d4955d8954
   VERSION_STRING: r20260929-d958caf
-  # userspace packages of this base are published under feed2/<FEED_BASE>/
   FEED_BASE: mini-d958caf
-  # The toolchain cache takes ~5 GB of the 10 GB Actions cache quota.
   CCACHE_MAXSIZE: 2G
   ARCH: aarch64_cortex-a73
   TARGET: qualcommbe/ipq95xx
@@ -256,7 +230,6 @@ jobs:
           echo "VERMAGIC=$VERMAGIC" >> "$GITHUB_ENV"
           f=files/etc/apk/repositories.d/customfeeds.list
           sed -i "s|feed2/targets/$TARGET/packages/packages.adb|feed2/targets/$TARGET/$VERMAGIC/packages/packages.adb|" "$f"
-          sed -i "s|feed2/$ARCH/|feed2/$FEED_BASE/$ARCH/|" "$f"
           grep "feed2/" "$f"
           TAG="${{ github.ref_name }}"
           case "$TAG" in mini-v*) VER="${TAG#mini-v}"; VER="${VER%%-*}" ;; mini-debug-*) VER="$TAG" ;; *) VER=dev ;; esac
